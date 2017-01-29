@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>hentai4doujin - Fast Comic Viewer</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	</head>
+	<body>
+		<table align="center">
+			<tr align="center">
+				<th colspan="5"><h2>www.hentai4doujin.com</h2></th>
+			</tr>
+			<tr align="center">
+				<th colspan="2">ImgLink</th>
+				<th colspan="2">ComicID</th>
+				<th colspan="2">Page</th>
+			</tr>
+			<tr align="center">
+				<td colspan="2"><input type="text" id="ImgLink"></input></td>
+				<td colspan="2"><input type="text" id="ComicID"></input></td>
+				<td colspan="2"><input type="text" id="Page"></input></td>
+			</tr>
+			<tr align="center">
+				<td colspan="6"><input type="button" onclick="viewcomic()" value="OK"></input></td>
+			</tr>
+			<tr align="center">
+				<td colspan="6">
+					<img id="comicbox" width="90%" onclick="NEXT(3)"/>
+				</td>
+			</tr>
+			<tr align="center">
+				<td colspan="3" style="background-color: #000000;color: #FFFFFF;font-size: 20pt;" onclick="PREV(3)">PREV</td>
+				<td colspan="3" style="background-color: #000000;color: #FFFFFF;font-size: 20pt;" onclick="NEXT(3)">NEXT</td>
+			</tr>
+		</table>
+		<script>
+			function viewcomic()
+			{
+				document.getElementById('comicbox').src='http://www.hentai4doujin.com/imglink/'+document.getElementById('ImgLink').value+'/'+document.getElementById('ComicID').value+'/'+document.getElementById('Page').value+'.jpg';
+			}
+			function PREV(n)
+			{
+				switch(document.getElementById('Page').value.charAt(n-1))
+				{
+					case '0':
+						if(n>1)
+							PREV(n-1);
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'9';
+						break;
+					case '1':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'0';
+						break;
+					case '2':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'1';
+						break;
+					case '3':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'2';
+						break;
+					case '4':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'3';
+						break;
+					case '5':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'4';
+						break;
+					case '6':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'5';
+						break;
+					case '7':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'6';
+						break;
+					case '8':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'7';
+						break;
+					case '9':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'8';
+						break;
+				}
+				viewcomic();
+			}
+			function NEXT(n)
+			{
+				switch(document.getElementById('Page').value.charAt(n-1))
+				{
+					case '9':
+						if(n>1)
+							NEXT(n-1);
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'0';
+						break;
+					case '8':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'9';
+						break;
+					case '7':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'8';
+						break;
+					case '6':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'7';
+						break;
+					case '5':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'6';
+						break;
+					case '4':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'5';
+						break;
+					case '3':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'4';
+						break;
+					case '2':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'3';
+						break;
+					case '1':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'2';
+						break;
+					case '0':
+						document.getElementById('Page').value=document.getElementById('Page').value.substring(0,n-1)+'1';
+						break;
+				}
+				viewcomic();
+			}
+		</script>
+	</body>
+</html>
