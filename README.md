@@ -1,2 +1,2 @@
-# FCW
-FCW=Fast Comic Viewer
+# FCV
+FCV=Fast Comic Viewer
