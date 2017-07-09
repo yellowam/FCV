@@ -1,0 +1,50 @@
+
+<html>
+	<head>
+		<title>asmhentai - Fast Comic Viewer</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	</head>
+	<body>
+		<table align="center">
+			<tr align="center">
+				<th colspan="2"><h2>nhentai.net</h2></th>
+			</tr>
+			<tr align="center">
+				<th>ComicID</th>
+				<th>Page</th>
+			</tr>
+			<tr align="center">
+				<td><input type="text" id="ComicID"></input></td>
+				<td><input type="text" id="Page"></input></td>
+			</tr>
+			<tr align="center">
+				<td colspan="2"><input type="button" onclick="viewcomic()" value="OK"></input></td>
+			</tr>
+			<tr align="center">
+				<td colspan="2">
+					<img id="comicbox" width="90%" onclick="NEXT()"/>
+				</td>
+			</tr>
+			<tr align="center">
+				<td style="background-color: #000000;color: #FFFFFF;font-size: 20pt;" onclick="PREV()">PREV</td>
+				<td style="background-color: #000000;color: #FFFFFF;font-size: 20pt;" onclick="NEXT()">NEXT</td>
+			</tr>
+		</table>
+		<script>
+			function viewcomic()
+			{
+				document.getElementById('comicbox').src='https://i.nhentai.net/galleries/'+document.getElementById('ComicID').value+'/'+document.getElementById('Page').value+'.jpg';
+			}
+			function PREV()
+			{
+				document.getElementById('Page').value=Number(document.getElementById('Page').value)-1;
+				viewcomic();
+			}
+			function NEXT()
+			{
+				document.getElementById('Page').value=Number(document.getElementById('Page').value)+1;
+				viewcomic();
+			}
+		</script>
+	</body>
+</html>
