@@ -32,7 +32,7 @@
 		<script>
 			function viewcomic()
 			{
-				document.getElementById('comicbox').src='http://www.hentai4doujin.com/imglink/'+document.getElementById('ComicID').value.slice(0,2)+'/00000'+document.getElementById('ComicID').value+'/'+document.getElementById('Page').value+'.jpg';
+				document.getElementById('comicbox').src='http://www.hentai4doujin.com/imglink/'+Number(document.getElementById('ComicID').value.slice(0,2))+'/00000'+document.getElementById('ComicID').value+'/'+document.getElementById('Page').value+'.jpg';
 			}
 			function PREV(n)
 			{
