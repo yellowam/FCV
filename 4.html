@@ -6,35 +6,33 @@
 	<body>
 		<table align="center">
 			<tr align="center">
-				<th colspan="5"><h2>www.hentai4doujin.com</h2></th>
+				<th colspan="2"><h2>www.hentai4doujin.com</h2></th>
 			</tr>
 			<tr align="center">
-				<th colspan="2">ImgLink</th>
-				<th colspan="2">ComicID</th>
-				<th colspan="2">Page</th>
+				<th>ComicID</th>
+				<th>Page</th>
 			</tr>
 			<tr align="center">
-				<td colspan="2"><input type="text" id="ImgLink"></input></td>
-				<td colspan="2"><input type="text" id="ComicID"></input></td>
-				<td colspan="2"><input type="text" id="Page"></input></td>
+				<td><input type="text" id="ComicID"></input></td>
+				<td><input type="text" id="Page"></input></td>
 			</tr>
 			<tr align="center">
-				<td colspan="6"><input type="button" onclick="viewcomic()" value="OK"></input></td>
+				<td colspan="2"><input type="button" onclick="viewcomic()" value="OK"></input></td>
 			</tr>
 			<tr align="center">
-				<td colspan="6">
+				<td colspan="2">
 					<img id="comicbox" width="90%" onclick="NEXT(3)"/>
 				</td>
 			</tr>
 			<tr align="center">
-				<td colspan="3" style="background-color: #000000;color: #FFFFFF;font-size: 20pt;" onclick="PREV(3)">PREV</td>
-				<td colspan="3" style="background-color: #000000;color: #FFFFFF;font-size: 20pt;" onclick="NEXT(3)">NEXT</td>
+				<td style="background-color: #000000;color: #FFFFFF;font-size: 20pt;" onclick="PREV(3)">PREV</td>
+				<td style="background-color: #000000;color: #FFFFFF;font-size: 20pt;" onclick="NEXT(3)">NEXT</td>
 			</tr>
 		</table>
 		<script>
 			function viewcomic()
 			{
-				document.getElementById('comicbox').src='http://www.hentai4doujin.com/imglink/'+document.getElementById('ImgLink').value+'/'+document.getElementById('ComicID').value+'/'+document.getElementById('Page').value+'.jpg';
+				document.getElementById('comicbox').src='http://www.hentai4doujin.com/imglink/'+document.getElementById('ComicID').value.slice(0,2)+'/00000'+document.getElementById('ComicID').value+'/'+document.getElementById('Page').value+'.jpg';
 			}
 			function PREV(n)
 			{
